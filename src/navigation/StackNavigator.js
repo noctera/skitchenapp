@@ -9,6 +9,8 @@ import New from "../screens/New";
 import Notification from "../screens/Notification";
 import Profile from "../screens/Profile";
 import Lists from "../screens/Lists";
+import Login from "../screens/Login";
+import Register from "../screens/Register";
 import { COLORS } from "../../colors";
 
 
@@ -23,6 +25,15 @@ const screenOptionStyle = {
   headerTintColor: "white",
   headerBackTitle: "Back",
 };
+
+const AuthStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
+      <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
+    </Stack.Navigator>
+  )
+}
 
 const FeedStackNavigator = () => {
   return (
@@ -72,4 +83,4 @@ const ListsStackNavigator = () => {
   );
 }
 
-export { FeedStackNavigator, ExploreStackNavigator, NewStackNavigator, NotificationStackNavigator, ProfileStackNavigator, ListsStackNavigator};
+export { AuthStackNavigator, FeedStackNavigator, ExploreStackNavigator, NewStackNavigator, NotificationStackNavigator, ProfileStackNavigator, ListsStackNavigator};

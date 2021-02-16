@@ -1,5 +1,5 @@
 import React from "react";
-import {COLORS} from '../colors';
+import {COLORS} from '../../colors';
 import { View, StyleSheet, Text } from "react-native";
 
 const Profile = () => {

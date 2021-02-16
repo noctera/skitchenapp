@@ -1,5 +1,5 @@
 import React from "react";
-import {COLORS} from '../colors';
+import {COLORS} from '../../colors';
 import { View, Button, Text, StyleSheet } from "react-native";
 
 const Lists = ({ navigation }) => {

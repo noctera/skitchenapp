@@ -1,5 +1,5 @@
 import React from "react";
-import {COLORS} from '../colors';
+import {COLORS} from '../../colors';
 import { View, Button, Text, StyleSheet, Image, ScrollView  } from "react-native";
 
 const Home = ({ navigation }) => {
