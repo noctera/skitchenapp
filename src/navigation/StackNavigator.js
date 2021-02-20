@@ -2,6 +2,7 @@
 
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import {Image} from "react-native";
 
 import Feed from "../screens/Feed";
 import Explore from "../screens/Explore";
@@ -26,6 +27,19 @@ const screenOptionStyle = {
   headerBackTitle: "Back",
 };
 
+
+function LogoTitle({navigation}) {
+  return (
+    <Image
+      style={{ width: 30, height: 30 }}
+      source={require('../icons/tabbar/menu-button-standart.png')}
+      onAccessibilityTap={() => navigation.openDrawer()}
+    />
+  );
+}
+
+
+
 const AuthStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
@@ -35,10 +49,10 @@ const AuthStackNavigator = () => {
   )
 }
 
-const FeedStackNavigator = () => {
+const FeedStackNavigator = ({navigation}) => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Home" component={Feed} />
+      <Stack.Screen name="Home" component={Feed} options={{ headerShown: false}}/>
     </Stack.Navigator>
   );
 }
@@ -54,7 +68,7 @@ const ExploreStackNavigator = () => {
 const NewStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="New" component={New} />
+      <Stack.Screen name="New" component={New} options={{ headerShown: false}}/>
     </Stack.Navigator>
   );
 }

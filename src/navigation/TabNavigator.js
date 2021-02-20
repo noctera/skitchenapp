@@ -30,7 +30,7 @@ const images = {
   }
 }
 
-const BottomTabNavigator = () => {
+const BottomTabNavigator = ({navigation}) => {
   return (
     <Tab.Navigator
     screenOptions={({ route }) => ({
