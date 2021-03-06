@@ -68,12 +68,13 @@ const BottomTabNavigator = ({navigation}) => {
     tabBarOptions={{
       activeTintColor: COLORS.primary,
       inactiveTintColor: COLORS.light,
+      keyboardHidesTabBar: true,
       iconStyle: { height: 30, width: 30 },
       style: {
           backgroundColor: COLORS.alternative,
           borderTopWidth: 0,
           paddingTop: 3,
-          paddingBottom: 3
+          paddingBottom: 3,
       }
     }}>
       <Tab.Screen name="Feed" component={FeedStackNavigator} />
