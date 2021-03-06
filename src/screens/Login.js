@@ -35,7 +35,7 @@ const Login = ({ navigation }) => {
             .then(response => {
                 //setErrorMsg(false);
                 //store username, email and jwt token in redux store
-                dispatch(signIn({username: response.data.user.name, email: response.data.user.email, jwt: response.data.token}));
+                dispatch(signIn({id: response.data.user.id, username: response.data.user.name, email: response.data.user.email, jwt: response.data.token}));
                 console.log(response.data)
             })
             

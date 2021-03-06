@@ -1,11 +1,12 @@
 let initialState = {
     user: {
-        username: "",
-        email: "",
-        jwt: "",
+        id: "bf827ee6-291a-4dab-97f1-a740939e9e65",
+        username: "Julian",
+        email: "test@gmail.com",
+        jwt: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJmODI3ZWU2LTI5MWEtNGRhYi05N2YxLWE3NDA5MzllOWU2NSIsImlhdCI6MTYxNDQyMTQ1N30.Y-1bOAppk9bSD1s8v560WJf0L43BPrDJtOviYEBmxSo",
     },
     serverAddress: "http://192.168.178.58:5000",
-    isLoggedIn: false,
+    isLoggedIn: true,
 }
 
 const loginReducer = (state = initialState, action) => {
@@ -14,6 +15,7 @@ const loginReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: {
+                    id: action.payload.id,
                     username: action.payload.username,
                     email: action.payload.email,
                     jwt: action.payload.jwt
@@ -24,6 +26,7 @@ const loginReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: {
+                    id: action.payload.id,
                     username: action.payload.username,
                     email: action.payload.email,
                     jwt: action.payload.jwt
@@ -35,6 +38,7 @@ const loginReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: {
+                    id: "",
                     username: "",
                     email: "",
                     jwt: "",
