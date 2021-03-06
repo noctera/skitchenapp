@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useSelector } from 'react-redux';
-import DrawerNavigator from './src/navigation/DrawerNavigator';
+import TabNavigator from './src/navigation/TabNavigator';
 import {AuthStackNavigator} from './src/navigation/StackNavigator';
 import store from './src/redux/Store/index';
 
@@ -19,7 +19,7 @@ const App = () => {
   else {
     return (
       <NavigationContainer>
-        <DrawerNavigator />
+        <TabNavigator />
       </NavigationContainer>
     );
   }
