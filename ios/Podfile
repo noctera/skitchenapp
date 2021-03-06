@@ -8,6 +8,10 @@ target 'skitchenapp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
+
+  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
   target 'skitchenappTests' do
     inherit! :complete
     # Pods for testing
