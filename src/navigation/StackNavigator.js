@@ -84,7 +84,7 @@ const NotificationStackNavigator = () => {
 const ProfileStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false}}/>
     </Stack.Navigator>
   );
 }
